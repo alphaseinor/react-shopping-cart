@@ -11,6 +11,7 @@ import ShoppingCart from './components/ShoppingCart';
 // Contexts
 import {ProductContext} from './contexts/ProductContext'
 import { CartContext } from './contexts/CartContext';
+import Footer from './components/Footer';
 
 function App() {
 	const [products] = useState(data);
@@ -33,6 +34,7 @@ function App() {
 					{/* Routes */}
 					<Route exact path='/' component={Products} />
 					<Route path="/cart" component={ShoppingCart}/>
+					<Footer />
 				</ CartContext.Provider>
 			</ ProductContext.Provider>
 		</div>
