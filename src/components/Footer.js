@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import {NavLink} from 'react-router-dom'
 import {CartContext} from '../contexts/CartContext'
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
   return (
     <div className="shopping-cart__checkout">
 			<p>Total: ${getCartTotal()}</p>
-			<button>Checkout</button>
+			<NavLink to="/cart">Checkout</NavLink>
 		</div>
   )
 }
