@@ -11,6 +11,7 @@ import ShoppingCart from './components/ShoppingCart';
 // Contexts
 import {ProductContext} from './contexts/ProductContext'
 import { CartContext } from './contexts/CartContext';
+import Footer from './components/Footer';
 
 function App() {
 	const [products] = useState(data);
@@ -29,10 +30,12 @@ function App() {
 			<ProductContext.Provider value={{products, addItem}}>
 				<CartContext.Provider value={{cart, removeItem}}>
 					<Navigation cart={cart} />
-
-					{/* Routes */}
-					<Route exact path='/' component={Products} />
-					<Route path="/cart" component={ShoppingCart}/>
+					<main>
+						{/* Routes */}
+						<Route exact path='/' component={Products} />
+						<Route path="/cart" component={ShoppingCart}/>
+					</main>
+					<Footer />
 				</ CartContext.Provider>
 			</ ProductContext.Provider>
 		</div>
